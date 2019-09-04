@@ -5,7 +5,7 @@ module Cadmium
   abstract class Phonetics
     include Cadmium::Util::StopWords
 
-    @@tokenizer = Cadmium::Aggressive.new
+    @@tokenizer = Cadmium::Tokenizer::Aggressive.new
 
     def self.compare(word1, word2)
       process(word1) == process(word2)
